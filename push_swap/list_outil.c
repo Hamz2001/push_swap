@@ -47,6 +47,18 @@ s_stack	*lstlast(s_stack	*lst)
 	return(tmp);
 }
 
+s_stack	*lstlast_befor(s_stack	*lst)
+{
+	s_stack *tmp;
+
+	tmp = lst;
+	while (tmp->next->next != NULL)
+	{
+		tmp = tmp->next; 
+	}
+	return(tmp);
+}
+
 void    lstadd_back(s_stack **lst, s_stack *new)
 {
     s_stack    *p;

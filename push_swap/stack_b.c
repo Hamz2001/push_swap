@@ -39,6 +39,7 @@ void	sa(s_stack *nb)
 		nb->value = nb->next->value;
 		nb->next->value = tmp;
 	}
+	printf("sa\n");
 }
 
 void	sb(s_stack	*nb)
@@ -51,10 +52,12 @@ void	sb(s_stack	*nb)
 		nb->value = nb->next->value;
 		nb->next->value = tmp;
 	}
+	printf("sb\n");
 }
 
 void	ss(s_stack *nb)
 {
 	sa(nb);
 	sb(nb);
+	printf("ss\n");
 }

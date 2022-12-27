@@ -31,22 +31,14 @@ int main(int ac, char **av)
 	int o;
 	int p;
 	char **nb;
-	//int l;
 	s_stack *a = NULL;
-	s_stack *b = NULL;
+	//s_stack *b = NULL;
 	
 	i = 1;
 	o = 0;
-	//l = 2;
 	if (ac > 1)
 	{
-		// av = ft_split(av[1], ' ');
-		// while (av[o])
-		// {
-		// 	printf("%s\n",av[o]);
-		// 	o++;
-		// }
-		while(av[i] )
+		while(av[i])
 		{
 			p = 0;
 			nb = ft_split(av[i], ' ');
@@ -55,15 +47,16 @@ int main(int ac, char **av)
 				ft_stack_a(&a,ft_atoi(nb[p]));
 				p++;
 			}
-			p = 0;
-			while(nb[p])
-			{
-				ft_stack_b(&b, ft_atoi(nb[p]));
-				//printf("\nhere nb \n: %s", nb[p]);
-				p++;
-			}
+			// p = 0;
+			// while(nb[p])
+			// {
+			// 	ft_stack_b(&b, ft_atoi(nb[p]));
+			// 	//printf("\nhere nb \n: %s", nb[p]);
+			// 	p++;
+			// }
 			i++;
 		}
+		ft_check_1(&a);
 		// while(av[l])
 		// {
 		// 	p = 0;
@@ -79,19 +72,25 @@ int main(int ac, char **av)
 		//pa(&a,&b);
 		//pb(&a,&b);
 		//rr(&a,&b);
+		//rrr(&a,&b);
+		//if()
 
 		
-		while(a)
-		{
-			printf("\nStack a: %d\n",a->value);
-			a = a->next;
-		}
-		printf("=================");
-		while(b)
-		{
-			printf("\nStack b: %d\n",b->value);
-			b = b->next;
-		}
+		// while(a)
+		// {
+		// 	printf("\nStack a: %d\n",a->value);
+		// 	a = a->next;
+		// }
+		// //printf("=================");
+		// while(b)
+		// {
+		// 	printf("\nStack b: %d\n",b->value);
+		// 	b = b->next;
+		// }
+	}
+	else
+	{
+		write(2, "Error", 5);
 	}
 	//system("leaks push_swap");
 }

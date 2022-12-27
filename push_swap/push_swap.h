@@ -17,7 +17,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include"libft1/libft.h"
 #include <limits.h>
 
 //Struct
@@ -47,9 +46,20 @@ void	ra(s_stack **a);
 void	rb(s_stack **b);
 //rotate rotate
 void	rr(s_stack **a, s_stack **b);
+//reverse rotate a
+void	rra(s_stack **a);
+//reverse rotate b
+void	rrb(s_stack **b);
+//reverse rotate a & b
+void	rrr(s_stack **a, s_stack **b);
+//check two number
+void	ft_check_1(s_stack **a);
+void	ft_check_2(s_stack **a);
+void	ft_check_3(s_stack **a);
 
 void lstadd_back(s_stack **lst, s_stack *new);
 s_stack	*lstlast(s_stack	*lst);
+s_stack	*lstlast_befor(s_stack	*lst);
 s_stack	*lstnew(int content);
 void	lstadd_front(s_stack **lst, s_stack *new);
 

@@ -36,6 +36,8 @@ stack_b.c \
 list_outil.c    \
 push.c  \
 rotate.c    \
+rev_rotate.c    \
+ft_check_two.c  \
 
             # push_swap_util.c \
             # check.c \
@@ -51,7 +53,7 @@ OBJ    = $(SRC:.c=.o)
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CC) $(CFALGS) $(OBJ) libft1/libft.a -o $(TARGET)
+	$(CC) $(CFALGS) $(OBJ) -o $(TARGET)
 
 # push_swap: $(NAME)
 # 		gcc main.c push_swap.a libft1/libft.a -o $(TARGET)
