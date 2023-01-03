@@ -73,3 +73,18 @@ void    lstadd_back(s_stack **lst, s_stack *new)
     p = lstlast(*lst);
     p->next = new;
 }
+
+int lstsize(s_stack *a)
+{
+	int	i;
+	s_stack	*tmp;
+
+	tmp = a;
+	i = 0;
+	while(tmp)
+	{
+		tmp = tmp->next;
+		i++;
+	}
+	return(i);
+}

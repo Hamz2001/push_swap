@@ -32,13 +32,17 @@ CC  = cc
 # NAME    = push_swap.a
 SRC        = main.c \
 ft_atoi.c \
-stack_b.c \
 list_outil.c    \
-push.c  \
-rotate.c    \
-rev_rotate.c    \
-ft_check_two.c  \
+ft_split.c  \
+outil_libft.c \
+ft_check.c  \
+ft_move.c   \
+sort_arr.c  \
 
+            # push.c  \
+            # rotate.c    \
+            # rev_rotate.c    \
+            # stack_b.c \
             # push_swap_util.c \
             # check.c \
             # main.c \
@@ -53,7 +57,7 @@ OBJ    = $(SRC:.c=.o)
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CC) $(CFALGS) $(OBJ) -o $(TARGET)
+	$(CC) $(CFALGS) $(OBJ) -o $(TARGET) ; $(RM) $(OBJ)
 
 # push_swap: $(NAME)
 # 		gcc main.c push_swap.a libft1/libft.a -o $(TARGET)
